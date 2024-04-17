@@ -1,3 +1,4 @@
+import { Input } from "@mui/material";
 import { forwardRef } from "react";
 import { Controller, useForm } from "react-hook-form";
 
@@ -36,43 +37,19 @@ function App() {
         <Controller
           name="name"
           control={control}
-          render={({ field }) => (
-            <InputText
-              name={"name"}
-              type={"text"}
-              label={"Name"}
-              value={field.value}
-              {...field}
-            />
-          )}
+          render={({ field }) => <Input {...field} />}
         />
 
         <Controller
           name="email"
           control={control}
-          render={({ field }) => (
-            <InputText
-              name={"email"}
-              type={"email"}
-              label={"Email"}
-              value={field.value}
-              {...field}
-            />
-          )}
+          render={({ field }) => <Input {...field} />}
         />
 
         <Controller
           name="age"
           control={control}
-          render={({ field }) => (
-            <InputText
-              name={"age"}
-              type={"number"}
-              label={"Age"}
-              value={field.value}
-              {...field}
-            />
-          )}
+          render={({ field }) => <Input {...field} />}
         />
 
         <button type="submit">submit</button>
